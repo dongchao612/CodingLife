@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/dongchao/桌面/CodingLife/03、makefile/makefile_multiple/main.c
+stdio.h
+-
+stdlib.h
+-
+tool1.h
+/home/dongchao/桌面/CodingLife/03、makefile/makefile_multiple/tool1.h
+tool2.h
+/home/dongchao/桌面/CodingLife/03、makefile/makefile_multiple/tool2.h
+
+/home/dongchao/桌面/CodingLife/03、makefile/makefile_multiple/tool1.c
+stdio.h
+-
+tool1.h
+/home/dongchao/桌面/CodingLife/03、makefile/makefile_multiple/tool1.h
+
+/home/dongchao/桌面/CodingLife/03、makefile/makefile_multiple/tool1.h
+
+/home/dongchao/桌面/CodingLife/03、makefile/makefile_multiple/tool2.c
+stdio.h
+-
+tool2.h
+/home/dongchao/桌面/CodingLife/03、makefile/makefile_multiple/tool2.h
+
+/home/dongchao/桌面/CodingLife/03、makefile/makefile_multiple/tool2.h
+

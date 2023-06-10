@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/dongchao/桌面/CmakeDemo/factorial.cpp
+functions.h
+/home/dongchao/桌面/CmakeDemo/functions.h
+
+/home/dongchao/桌面/CmakeDemo/functions.h
+
+/home/dongchao/桌面/CmakeDemo/main.cpp
+iostream
+-
+functions.h
+/home/dongchao/桌面/CmakeDemo/functions.h
+
+/home/dongchao/桌面/CmakeDemo/printhello.cpp
+iostream
+-
+functions.h
+/home/dongchao/桌面/CmakeDemo/functions.h
+
