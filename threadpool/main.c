@@ -12,17 +12,17 @@ pthread_cond_signal();
 // 表示队列节点的结构体
 typedef struct Task
 {
-    void (*function)(void *arg);
-    void *arg;
-    struct Task *next;
+    void (*function)(void *arg); // 函数指针
+    void *arg;                   // 参数
+    struct Task *next;           // next指针
 } Task;
 
 // 表示线程池
 typedef struct ThreadPool
 {
     // 任务队列
-    Task *queueFront;
-    Task *queueRear;
+    Task *queueFront; // 队头指针
+    Task *queueRear;  // 队尾指针
 
     // 线程数量
     int num;
@@ -38,6 +38,7 @@ typedef struct ThreadPool
     int shutdown;
 
 } ThreadPool;
+
 // 线程处理函数
 void *worker(void *arg)
 {
