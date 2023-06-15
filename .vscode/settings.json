@@ -3,6 +3,8 @@
         "stdio.h": "c",
         "sqlite3.h": "c",
         "string.h": "c",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "tool2.h": "c",
+        "tool1.h": "c"
     }
 }
