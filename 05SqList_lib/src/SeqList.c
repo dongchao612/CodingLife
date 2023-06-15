@@ -1,7 +1,8 @@
 #include "SeqList.h"
 #include <stdio.h>
 #include <stdlib.h>
-void SLInit(SeqList *L) 
+
+void SLInit(SeqList *L)
 {
     L->size = 0;
 }

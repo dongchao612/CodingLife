@@ -5,6 +5,7 @@
         "string.h": "c",
         "stdlib.h": "c",
         "tool2.h": "c",
-        "tool1.h": "c"
+        "tool1.h": "c",
+        "f.h": "c"
     }
 }

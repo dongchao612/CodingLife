@@ -1,8 +1,9 @@
 #include <stdio.h> // 头文件展开
 
-#include "f.h"
+void f1();
+void f2();
 
-int main()
+int main(int argc, char const *argv[])
 {
     f1();
     f2();
