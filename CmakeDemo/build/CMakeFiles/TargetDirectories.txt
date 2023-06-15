@@ -1,3 +1,0 @@
-/home/dongchao/桌面/CmakeDemo/build/CMakeFiles/rebuild_cache.dir
-/home/dongchao/桌面/CmakeDemo/build/CMakeFiles/edit_cache.dir
-/home/dongchao/桌面/CmakeDemo/build/CMakeFiles/main.dir

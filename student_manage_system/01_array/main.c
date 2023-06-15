@@ -16,7 +16,7 @@ typedef struct Student
     char tel[MAXTELSIZE];
 } Stu;
 Stu *g_info[MAXSSTUIZE] = {0};
-int g_count; //表示人数
+int g_count; // 表示人数
 
 void welcome()
 {
@@ -52,13 +52,13 @@ void add_info()
 
         // printf("%d\t%s\t%d\t%s\n", g_info[g_count]->id, g_info[g_count]->name, g_info[g_count]->age, g_info[g_count]->tel);
 
-        //判断电话长度
+        // 判断电话长度
         if (strlen(g_info[g_count]->tel) != MAXTELSIZE - 1)
         {
             printf("输入的电话信息有误，请重新输入\n");
             continue;
         }
-        //判断姓名是否重复
+        // 判断姓名是否重复
         int i;
         for (i = 0; i < g_count; i++)
         {
@@ -81,7 +81,7 @@ void add_info()
 }
 void show_info()
 {
-    //排序
+    // 排序
 
     int i, j;
     for (i = 0; i < g_count; i++)
@@ -125,13 +125,13 @@ flag:
             {
                 scanf("%d%s%d%s", &g_info[i]->id, g_info[i]->name, &g_info[i]->age, g_info[i]->tel);
 
-                //判断电话长度
+                // 判断电话长度
                 if (strlen(g_info[i]->tel) != MAXTELSIZE - 1)
                 {
                     printf("输入的电话信息有误，请重新输入\n");
                     continue;
                 }
-                //判断姓名是否重复
+                // 判断姓名是否重复
                 int j;
                 for (j = 0; j < g_count; j++)
                 {
@@ -219,7 +219,7 @@ void find_info()
         scanf("%s", name);
         for (i = 0; i < g_count; i++)
         {
-            if (! strcmp(g_info[i]->name, name))
+            if (!strcmp(g_info[i]->name, name))
             {
                 printf("信息如下\n%5d %5s %5d %15s\n", g_info[i]->id, g_info[i]->name, g_info[i]->age, g_info[i]->tel);
                 sleep(2);
