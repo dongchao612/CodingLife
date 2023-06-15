@@ -18,9 +18,9 @@ int main()
 {
     printf("sqlite3 version : %s\n", sqlite3_libversion());
 
-    //打开数据库
-    sqlite3 *ppdb; //数据库指针
-    char sql[128]; //保存sql语句的字符串
+    // 打开数据库
+    sqlite3 *ppdb; // 数据库指针
+    char sql[128]; // 保存sql语句的字符串
     int ret = sqlite3_open("student.db", &ppdb);
     if (ret != SQLITE_OK)
     {
@@ -28,10 +28,10 @@ int main()
         exit(0);
     }
 
-    //创建数据库
-    memset(sql, 0, sizeof(sql)); //清空sql
+    // 创建数据库
+    memset(sql, 0, sizeof(sql)); // 清空sql
     sprintf(sql, "create table if not exists student(id integer,name text,age integer);");
-    ret = sqlite3_exec(ppdb, sql, NULL, NULL, NULL); //执行sql语句
+    ret = sqlite3_exec(ppdb, sql, NULL, NULL, NULL); // 执行sql语句
     if (ret != SQLITE_OK)
     {
         printf("create:%s\n", sqlite3_errmsg(ppdb));
@@ -67,13 +67,13 @@ int main()
         printf("update:%s\n", sqlite3_errmsg(ppdb));
         exit(0);
     }
-#endif  
+#endif
 #if 1
     // 查询方法1
     memset(sql, 0, sizeof(sql));
     sprintf(sql, "select * from student;");
     printf("查询方法1结果如下\n");
-    ret = sqlite3_exec(ppdb, sql, print, NULL, NULL); //执行sql语句 回调函数
+    ret = sqlite3_exec(ppdb, sql, print, NULL, NULL); // 执行sql语句 回调函数
     if (ret != SQLITE_OK)
     {
         printf("select:%s\n", sqlite3_errmsg(ppdb));
@@ -82,7 +82,7 @@ int main()
 #endif
 #if 1
     // 查询方法2
-    char **result;//字符串数组
+    char **result; // 字符串数组
     int row = 0, column = 0;
     memset(sql, 0, sizeof(sql));
     sprintf(sql, "select * from student;");
@@ -103,7 +103,7 @@ int main()
 #endif
     // 查询方法2
     int i, j;
-    int inindex = column; //3
+    int inindex = column; // 3
     printf("查询方法2结果如下\n");
 
     for (i = 0; i < row; i++)
@@ -117,5 +117,4 @@ int main()
     }
 #endif
     exit(0);
-    
 }
